@@ -1,3 +1,4 @@
+import { useRoutes, BrowserRouter } from 'react-router-dom'
 import '@/App.css'
 import Home from '../Home'
 import MyAccount from '../MyAccount'
@@ -6,16 +7,21 @@ import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import SignIn from '../SignIn'
 
-function App () {
+const AppRoutes = () => {
+  const routes = useRoutes([
+    {
+      path: '/',
+      element: <Home />
+    }
+  ])
+  return routes
+}
+
+const App = () => {
   return (
-    <div className='bg-pink'>
-      <Home />
-      <MyAccount />
-      <MyOrder />
-      <MyOrders />
-      <NotFound />
-      <SignIn />
-    </div>
+    <BrowserRouter>
+      <AppRoutes />
+    </BrowserRouter>
   )
 }
 
