@@ -1,8 +1,8 @@
-import './App.css'
+import '@/App.css'
 
 function App () {
   return (
-    <div className='bg-warning'>
+    <div className='bg-pink'>
       Hello world!
     </div>
   )
