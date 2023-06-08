@@ -1,6 +1,6 @@
 const MyAccount = () => {
   return (
-    <div>MyAccount</div>
+    <div className='bg-purple'>MyAccount</div>
   )
 }
 export default MyAccount

@@ -1,6 +1,6 @@
 const MyOrder = () => {
   return (
-    <div>MyOrder</div>
+    <div className='bg-pink'>MyOrder</div>
   )
 }
 export default MyOrder
