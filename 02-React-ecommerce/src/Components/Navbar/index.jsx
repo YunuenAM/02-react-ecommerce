@@ -1,11 +1,19 @@
 import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
+  const activeStyle = {
+    textDecoration: 'underline'
+  }
+
   return (
-    <nav>
-      <ul>
+    <nav className='d-flex justify-content-between items-center fixed-top z-10 w-full py-5 px-8 text-md'>
+      <ul className='d-flex items-center text-decoration-none list-unstyled list-inline  gap-3'>
         <li>
-          <NavLink to='/'>
+          <NavLink
+            to='/'
+            style={({ isActive }) =>
+              isActive ? activeStyle : undefined}
+          >
             Jolietify
           </NavLink>
         </li>
@@ -40,7 +48,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <ul>
+      <ul className='d-flex items-center list-unstyled list inline text-decoration-none gap-3'>
         <li>
           <NavLink to='/my-orders'>
             Created by Yunuen AM
