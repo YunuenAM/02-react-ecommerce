@@ -1,6 +1,10 @@
+import Layout from '../../Components/Layout'
+
 const Home = () => {
   return (
-    <div className='bg-pink'>Home</div>
+    <Layout>
+      Home
+    </Layout>
   )
 }
 export default Home
