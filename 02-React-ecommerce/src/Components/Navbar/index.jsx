@@ -6,7 +6,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='d-flex justify-content-between items-center fixed-top z-10 w-full py-5 px-8 text-md'>
+    <nav className='d-flex justify-content-between items-center  top-0 z-10 w-full py-5 px-8 text-md'>
       <ul className='d-flex items-center text-decoration-none list-unstyled list-inline  gap-3'>
         <li>
           <NavLink
