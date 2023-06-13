@@ -14,7 +14,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? activeStyle : undefined}
           >
-            Jolietify
+            Jolitify
           </NavLink>
         </li>
         <li>
@@ -51,12 +51,12 @@ const Navbar = () => {
       <ul className='d-flex items-center list-unstyled list inline text-decoration-none gap-3'>
         <li>
           <NavLink to='/my-orders'>
-            Created by Yunuen AM
+            My Orders
           </NavLink>
         </li>
         <li>
           <NavLink to='/'>
-            My Orders
+            Home
           </NavLink>
         </li>
         <li>
