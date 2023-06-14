@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import jolitifyLogo from '@/img/Jolitify.jpg'
 
 const Navbar = () => {
   const activeStyle = {
@@ -6,15 +7,15 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='d-flex justify-content-between items-center  top-0 z-10 w-full py-5 px-8 text-md'>
-      <ul className='d-flex items-center  list-unstyled list-inline text-black  gap-3'>
+    <nav className='d-flex justify-content-between items-center  top-0 z-10 w-full py-2 px-8 text-md'>
+      <ul className='d-flex items-center  list-unstyled list-inline text-black   gap-3'>
         <li>
           <NavLink
             to='/' className='text-decoration-none text-black'
             style={({ isActive }) =>
               isActive ? activeStyle : undefined}
           >
-            Jolitify
+            <img className='m-4 d-flex justify-content-center ' src={jolitifyLogo} alt='Logo' style={{ maxWidth: '100px' }} />
           </NavLink>
         </li>
         <li>
