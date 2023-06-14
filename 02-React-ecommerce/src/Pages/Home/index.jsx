@@ -5,7 +5,7 @@ import Card from '../../Components/Card'
 const Home = () => {
   const [items, setItems] = useState(null)
   useEffect(() => {
-    fetch('https://api.escuelajs.co/api/v1/products')
+    fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
       .then(data => setItems(data))
   }, [])
@@ -15,7 +15,7 @@ const Home = () => {
 
       Home
       <div className='container text-center'>
-        <div className='row gap-4 mx-md-auto '>
+        <div className='row gap-4 mx-md-auto m-2 '>
           {
         items?.map(item => (
           <Card key={item.id} data={item} />
