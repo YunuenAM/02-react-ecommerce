@@ -1,7 +1,10 @@
 import { NavLink } from 'react-router-dom'
 import jolitifyLogo from '@/img/Jolitify.jpg'
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../../Context'
 
 const Navbar = () => {
+  const context = useContext(ShoppingCartContext)
   const activeStyle = {
     textDecoration: 'underline'
   }
@@ -71,7 +74,7 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          🛒0
+          🛒{context.count}
         </li>
       </ul>
     </nav>
