@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import jolitifyLogo from '@/img/Jolitify.jpg'
+import logo from '@/img/logo.jpg'
 import { useContext } from 'react'
 import { ShoppingCartContext } from '../../Context'
 
@@ -18,7 +18,7 @@ const Navbar = () => {
             style={({ isActive }) =>
               isActive ? activeStyle : undefined}
           >
-            <img className='m-4 d-flex justify-content-center ' src={jolitifyLogo} alt='Logo' style={{ maxWidth: '100px' }} />
+            <img className=' d-flex justify-content-center  rounded-3 p-1  ' src={logo} alt='Logo' style={{ maxWidth: '50px' }} />
           </NavLink>
         </li>
         <li>
