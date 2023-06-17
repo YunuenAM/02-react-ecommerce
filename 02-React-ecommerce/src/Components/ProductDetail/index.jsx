@@ -1,8 +1,13 @@
+import { useContext } from 'react'
+import { ShoppingCartContext } from '../../Context'
 import './productdetail.scss'
 
 const ProductDetail = () => {
+  const context = useContext(ShoppingCartContext)
   return (
-    <aside className='product-detail d-flex flex-column  position-fixed  border border-dark bg-light rounded-2  '>
+    <aside
+      className={`${context.isProductDetailOpen ? 'd-flex' : 'visually-hidden'} product-detail  flex-column  position-fixed  border border-dark bg-light rounded-2`}
+    >
       <div className='d-flex justify-content-between items-center p-5'>
         <h2 className='text-xl'>Detail<i className='bi bi-x-square-fill' /></h2>
 

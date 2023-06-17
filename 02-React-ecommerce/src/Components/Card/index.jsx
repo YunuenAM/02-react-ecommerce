@@ -4,7 +4,9 @@ import { ShoppingCartContext } from '../../Context'
 const Card = (data) => {
   const context = useContext(ShoppingCartContext)
   return (
-    <div className='card mx-auto' style={{ width: '18rem' }}>
+    <div
+      className='card mx-auto' style={{ width: '18rem' }} onClick={() => context.openProductDetail()}
+    >
       <div className='position-relative'>
         <span className='fw-bold position-absolute bg-light rounded-5 m-2 p-1'>{data.data.category.category}</span>
         <img src={data.data.image} className='card-img-top' alt={data.data.title} />
