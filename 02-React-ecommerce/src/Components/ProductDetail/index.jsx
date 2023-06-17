@@ -17,17 +17,17 @@ const ProductDetail = () => {
         </svg>
 
       </div>
-      <figure>
+      <figure className='px-3'>
         <img
-          className=' w-75 rounded-2  '
+          className=' w-25 rounded-2 mx-auto d-block   '
           src={context.productToShow.image}
           alt={context.productToShow.title}
         />
       </figure>
-      <p>
-        <span>  ${context.productToShow.price}  </span>
-        <span>  ${context.productToShow.title}  </span>
-        <span>  ${context.productToShow.description}  </span>
+      <p className='d-flex flex-column p-5 bg-pink'>
+        <span className=' fw-bold   text-xl-end mb-3'>  ${context.productToShow.price}  </span>
+        <span className='fw-bold  text-md-start mb-2 '>  {context.productToShow.title}  </span>
+        <span className=' text-sm-start '>  {context.productToShow.description}  </span>
       </p>
     </aside>
   )
