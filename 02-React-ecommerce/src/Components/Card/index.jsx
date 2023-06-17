@@ -3,9 +3,14 @@ import { ShoppingCartContext } from '../../Context'
 
 const Card = (data) => {
   const context = useContext(ShoppingCartContext)
+
+  const showProduct = (productDetail) => {
+    context.openProductDetail()
+    context.setProductToShow(productDetail)
+  }
   return (
     <div
-      className='card mx-auto' style={{ width: '18rem' }} onClick={() => context.openProductDetail()}
+      className='card mx-auto' style={{ width: '18rem' }} onClick={() => showProduct(data.data)}
     >
       <div className='position-relative'>
         <span className='fw-bold position-absolute bg-light rounded-5 m-2 p-1'>{data.data.category.category}</span>

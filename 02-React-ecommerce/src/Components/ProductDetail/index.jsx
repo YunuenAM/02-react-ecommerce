@@ -17,6 +17,18 @@ const ProductDetail = () => {
         </svg>
 
       </div>
+      <figure>
+        <img
+          className=' w-75 rounded-2  '
+          src={context.productToShow.image}
+          alt={context.productToShow.title}
+        />
+      </figure>
+      <p>
+        <span>  ${context.productToShow.price}  </span>
+        <span>  ${context.productToShow.title}  </span>
+        <span>  ${context.productToShow.description}  </span>
+      </p>
     </aside>
   )
 }
