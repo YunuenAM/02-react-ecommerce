@@ -8,6 +8,7 @@ import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import SignIn from '../SignIn'
 import Navbar from '../../Components/Navbar'
+import CheckoutSideMenu from '../../Components/CheckoutSideMenu'
 
 // Bootstrap CSS
 
@@ -28,6 +29,7 @@ const App = () => {
   return (
     <ShoppingCartProvider>
       <BrowserRouter>
+        <CheckoutSideMenu />
         <Navbar />
         <AppRoutes />
 

@@ -8,6 +8,14 @@ const Card = (data) => {
     context.openProductDetail()
     context.setProductToShow(productDetail)
   }
+
+  const addProductsToCart = (event, productData) => {
+    event.stopPropagation()
+    context.setCount(context.count + 1)
+    context.setCartProducts([...context.cartProducts, productData])
+    context.openCheckoutSideMenu()
+    context.closeProductDetail()
+  }
   return (
     <div
       className='card mx-auto' style={{ width: '18rem' }} onClick={() => showProduct(data.data)}
@@ -16,9 +24,9 @@ const Card = (data) => {
         <span className='fw-bold position-absolute bg-light rounded-5 m-2 p-1'>{data.data.category.category}</span>
         <img src={data.data.image} className='card-img-top' alt={data.data.title} />
         <div className='position-absolute top-0 end-0 p-2'>
-          <div className='bg-pink text-white rounded-3 p-2'>
+          <div className='bg-pink text-white rounded-3 p-2' onClick={(event) => addProductsToCart(event, data.data)}>
             <span
-              className='fw-bold p-2 bg-pink' onClick={() => context.setCount(context.count + 1)}
+              className='fw-bold p-2 bg-pink'
             >
               +
             </span>
