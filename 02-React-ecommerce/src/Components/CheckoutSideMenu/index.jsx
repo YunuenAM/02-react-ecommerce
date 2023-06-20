@@ -11,6 +11,17 @@ const CheckoutSideMenu = () => {
     const filteredProducts = context.cartProducts.filter(product => product.id != id)
     context.setCartProducts(filteredProducts)
   }
+
+  const handleCheckout = () => {
+    const orderToAdd = {
+      date: '01.02.23',
+      products: context.cartProducts,
+      totalProducts: context.cartProducts.length,
+      totalPrice: totalPrice(context.cartProducts)
+    }
+    context.setOrder([...context.order, orderToAdd])
+    context.setCartProducts([])
+  }
   return (
     <aside
       className={`${context.isCheckoutSideMenuOpen ? 'd-flex' : 'visually-hidden'} checkout-side-menu flex-column  position-fixed  border border-dark bg-light rounded-2`} style={{ zIndex: 999 }}
@@ -24,7 +35,7 @@ const CheckoutSideMenu = () => {
         </svg>
 
       </div>
-      <div className='px-4  overflow-y-scroll '>
+      <div className='px-4  overflow-y-scroll  flex-grow-1  '>
         {
         context.cartProducts.map(product => (
           <OrderCard
@@ -38,11 +49,12 @@ const CheckoutSideMenu = () => {
         ))
       }
       </div>
-      <div className='px-6'>
+      <div className='px-6 mb-4'>
         <p className='d-flex  justify-content-around  items-center'>
           <span>Total:</span>
           <span className=' text-xxl-end fw-bold '>${totalPrice(context.cartProducts)}</span>
         </p>
+        <button className='w-100 bg-purple  p-3 rounded-2   text-light ' onClick={() => handleCheckout()}>Checkout</button>
 
       </div>
     </aside>
