@@ -22,32 +22,56 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/' className='text-decoration-none text-black'>
+          <NavLink
+            to='/'
+            onClick={() => context.setSearchByCategory()}
+            className='text-decoration-none text-black'
+          >
             All
           </NavLink>
         </li>
         <li>
-          <NavLink to='/clothes' className='text-decoration-none text-black'>
+          <NavLink
+            to='/clothes'
+            onClick={() => context.setSearchByCategory('clothes')}
+            className='text-decoration-none text-black'
+          >
             Clothes
           </NavLink>
         </li>
         <li>
-          <NavLink to='/electronics' className='text-decoration-none text-black'>
+          <NavLink
+            to='/electronics'
+            onClick={() => context.setSearchByCategory('electronics')}
+            className='text-decoration-none text-black'
+          >
             Electronics
           </NavLink>
         </li>
         <li>
-          <NavLink to='/furnitures' className='text-decoration-none text-black'>
+          <NavLink
+            to='/furnitures'
+            onClick={() => context.setSearchByCategory('furnitures')}
+            className='text-decoration-none text-black'
+          >
             Furnitures
           </NavLink>
         </li>
         <li>
-          <NavLink to='/books' className='text-decoration-none text-black'>
+          <NavLink
+            to='/books'
+            onClick={() => context.setSearchByCategory('books')}
+            className='text-decoration-none text-black'
+          >
             Books
           </NavLink>
         </li>
         <li>
-          <NavLink to='/others' className='text-decoration-none text-black'>
+          <NavLink
+            to='/others'
+            onClick={() => context.setSearchByCategory('others')}
+            className='text-decoration-none text-black'
+          >
             Others
           </NavLink>
         </li>
