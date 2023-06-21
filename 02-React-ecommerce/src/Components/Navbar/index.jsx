@@ -32,11 +32,21 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to='/clothes'
-            onClick={() => context.setSearchByCategory('clothes')}
+            to="/men's clothing"
+            onClick={() => context.setSearchByCategory("men's clothing")}
             className='text-decoration-none text-black'
           >
-            Clothes
+            Men's clothing
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/women's clothing"
+            onClick={() => context.setSearchByCategory("women's clothing")}
+            className='text-decoration-none text-black'
+          >
+            Women's clothing
           </NavLink>
         </li>
         <li>
@@ -50,29 +60,11 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to='/furnitures'
-            onClick={() => context.setSearchByCategory('furnitures')}
+            to='/jewelery'
+            onClick={() => context.setSearchByCategory('jewelery')}
             className='text-decoration-none text-black'
           >
-            Furnitures
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/books'
-            onClick={() => context.setSearchByCategory('books')}
-            className='text-decoration-none text-black'
-          >
-            Books
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to='/others'
-            onClick={() => context.setSearchByCategory('others')}
-            className='text-decoration-none text-black'
-          >
-            Others
+            Jewelery
           </NavLink>
         </li>
       </ul>
