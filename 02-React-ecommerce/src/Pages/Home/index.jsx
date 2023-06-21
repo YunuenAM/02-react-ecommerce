@@ -6,6 +6,32 @@ import { ShoppingCartContext } from '../../Context'
 
 function Home () {
   const context = useContext(ShoppingCartContext)
+
+  const renderView = () => {
+    if (context.searchByTitle?.length > 0) {
+      if (context.filteredItems?.length > 0) {
+        return (
+          context.filteredItems?.map(item => (
+            <Card key={item.id} data={item} />
+
+          ))
+        )
+      } else {
+        return (
+          <div> No matches available 😵‍💫</div>
+        )
+      }
+    } else {
+      return (
+
+        context.items?.map(item => (
+          <Card key={item.id} data={item} />
+        ))
+
+      )
+    }
+  }
+
   return (
     <Layout>
 
@@ -19,16 +45,12 @@ function Home () {
         type='text'
         placeholder='Search a product'
         className='form-control text-center    rounded-3  border border-black w-100    align-items-center   p-3  mb-3  focus-ring-success  '
+        onChange={(event) => context.setSearchByTitle(event.target.value)}
       />
 
       <div className='container text-center'>
         <div className='row gap-4 mx-md-auto m-2 '>
-          {
-        context.items?.map(item => (
-          <Card key={item.id} data={item} />
-        ))
-      }
-
+          {renderView()}
         </div>
       </div>
       <ProductDetail />
