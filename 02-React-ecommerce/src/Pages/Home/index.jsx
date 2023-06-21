@@ -10,6 +10,17 @@ function Home () {
     <Layout>
 
       Home
+      <div className=' mb-4'>
+
+        <h1 className=' text-xxl-center '> Premium Products</h1>
+      </div>
+
+      <input
+        type='text'
+        placeholder='Search a product'
+        className='form-control text-center    rounded-3  border border-black w-100    align-items-center   p-3  mb-3  focus-ring-success  '
+      />
+
       <div className='container text-center'>
         <div className='row gap-4 mx-md-auto m-2 '>
           {
