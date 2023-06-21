@@ -8,9 +8,9 @@ const MyOrders = () => {
   const context = useContext(ShoppingCartContext)
   return (
     <Layout>
-      <div className=' '>
+      <div className=' mb-4'>
 
-        <h1> My Orders</h1>
+        <h1 className=' text-xxl-center '> My Orders</h1>
       </div>
 
       {
