@@ -3,6 +3,7 @@ import { ShoppingCartProvider } from '../../Context'
 import '@/App.css'
 import Home from '../Home'
 import MyAccount from '../MyAccount'
+import PremiumAccount from '../PremiumAccount'
 import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
@@ -21,6 +22,7 @@ const AppRoutes = () => {
     { path: "/men's clothing", element: <Home /> },
     { path: "/women's clothing", element: <Home /> },
     { path: '/my-account', element: <MyAccount /> },
+    { path: '/premium-account', element: <PremiumAccount /> },
     { path: '/my-order', element: <MyOrder /> },
     { path: '/my-orders', element: <MyOrders /> },
     { path: '/my-orders/last', element: <MyOrder /> },

@@ -69,6 +69,12 @@ const Navbar = () => {
         </li>
       </ul>
       <ul className='d-flex items-center list-unstyled list inline text-decoration-none gap-3'>
+
+        <li>
+          <NavLink to='/premium-account' className='text-decoration-none text-black'>
+            Premium account
+          </NavLink>
+        </li>
         <li>
           <NavLink to='/my-orders' className='text-decoration-none text-black'>
             My Orders
