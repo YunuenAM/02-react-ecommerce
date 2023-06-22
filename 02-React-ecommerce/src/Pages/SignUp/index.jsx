@@ -12,7 +12,7 @@ const Signup = () => {
     try {
       const response = await registerUserService(data)
       if (response.status === 201) {
-        navigate('/login')
+        navigate('/signIn')
         // console.log('Usuario creado correctamente', response.data)
       }
     } catch (error) {
