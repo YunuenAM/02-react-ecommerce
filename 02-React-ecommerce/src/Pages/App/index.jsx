@@ -2,7 +2,7 @@ import { useRoutes, BrowserRouter } from 'react-router-dom'
 import { ShoppingCartProvider } from '../../Context'
 import '@/App.css'
 import Home from '../Home'
-import MyAccount from '../MyAccount'
+import SignUp from '../SignUp'
 import PremiumAccount from '../PremiumAccount'
 import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
@@ -21,7 +21,7 @@ const AppRoutes = () => {
     { path: '/jewelery', element: <Home /> },
     { path: "/men's clothing", element: <Home /> },
     { path: "/women's clothing", element: <Home /> },
-    { path: '/my-account', element: <MyAccount /> },
+    { path: '/signUp', element: <SignUp /> },
     { path: '/premium-account', element: <PremiumAccount /> },
     { path: '/my-order', element: <MyOrder /> },
     { path: '/my-orders', element: <MyOrders /> },

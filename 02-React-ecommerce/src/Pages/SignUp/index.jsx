@@ -1,10 +1,10 @@
 import Layout from '../../Components/Layout'
 
-const MyAccount = () => {
+const SignUp = () => {
   return (
     <Layout>
-      MyAccount
+      SignUp
     </Layout>
   )
 }
-export default MyAccount
+export default SignUp

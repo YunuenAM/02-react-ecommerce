@@ -86,8 +86,8 @@ const Navbar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to='/my-account' className='text-decoration-none text-black'>
-            My Account
+          <NavLink to='/signUp' className='text-decoration-none text-black'>
+            SignUp
           </NavLink>
         </li>
         <li>
