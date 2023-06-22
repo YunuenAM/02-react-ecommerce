@@ -71,6 +71,7 @@ const Signup = () => {
             <option value=''>Choose...</option>
             <option value='M'>Male</option>
             <option value='F'>Female</option>
+            <option value='NB'>Non Binary</option>
           </select>
           <label htmlFor='gender'>Gender</label>
         </div>
