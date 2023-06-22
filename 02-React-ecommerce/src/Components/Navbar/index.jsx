@@ -25,7 +25,7 @@ const Navbar = () => {
           <NavLink
             to='/'
             onClick={() => context.setSearchByCategory()}
-            className='text-decoration-none text-black'
+            className='text-decoration-none text-black '
           >
             All
           </NavLink>
