@@ -79,9 +79,16 @@ const Navbar = () => {
             Home
           </NavLink>
         </li>
+
         <li>
-          <NavLink to='/my-account' className='text-decoration-none text-black'>
-            My Account
+          <NavLink to='/register' className='text-decoration-none text-black'>
+            Register
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to='/logout' className='text-decoration-none text-black'>
+            Log Out
           </NavLink>
         </li>
         <li>

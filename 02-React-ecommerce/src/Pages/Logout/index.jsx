@@ -1,10 +1,10 @@
 import Layout from '../../Components/Layout'
 
-const MyAccount = () => {
+const Logout = () => {
   return (
     <Layout>
-      MyAccount
+      LogOut
     </Layout>
   )
 }
-export default MyAccount
+export default Logout

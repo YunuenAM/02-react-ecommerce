@@ -2,10 +2,10 @@ import Layout from '../../Components/Layout'
 import logo from '@/img/logo.jpg'
 import '@/styles/form.css'
 
-const SingIn = () => {
+const Register = () => {
   return (
     <Layout>
-      <main className='form-singin w-100 m-auto'>
+      <main className='form-register w-100 m-auto'>
         <form>
           <img className='mb-4  align-items-center ' src={logo} alt='' width='200' height='200' />
           <h1 className='h3 mb-3 fw-normal '>Please Register</h1>
@@ -16,6 +16,18 @@ const SingIn = () => {
               className='form-control'
               id='floatingInput'
               placeholder='John'
+              value=''
+              onChange={() => {}}
+            />
+            <label htmlFor='floatingInput'>Name</label>
+          </div>
+
+          <div className='form-floating'>
+            <input
+              type='email'
+              className='form-control'
+              id='floatingInput'
+              placeholder='name@example.com'
               value=''
               onChange={() => {}}
             />
@@ -41,4 +53,4 @@ const SingIn = () => {
     </Layout>
   )
 }
-export default SingIn
+export default Register

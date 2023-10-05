@@ -2,11 +2,12 @@ import { useRoutes, BrowserRouter } from 'react-router-dom'
 import { ShoppingCartProvider } from '../../Context'
 import '@/App.css'
 import Home from '../Home'
-import MyAccount from '../MyAccount'
+import Logout from '../Logout'
 import MyOrder from '../MyOrder'
 import MyOrders from '../MyOrders'
 import NotFound from '../NotFound'
 import SignIn from '../SignIn'
+import Register from '../Register/Register'
 import Navbar from '../../Components/Navbar'
 import CheckoutSideMenu from '../../Components/CheckoutSideMenu'
 
@@ -20,7 +21,8 @@ const AppRoutes = () => {
     { path: '/jewelery', element: <Home /> },
     { path: "/men's clothing", element: <Home /> },
     { path: "/women's clothing", element: <Home /> },
-    { path: '/my-account', element: <MyAccount /> },
+    { path: '/register', element: <Register /> },
+    { path: '/logout', element: <Logout /> },
     { path: '/my-order', element: <MyOrder /> },
     { path: '/my-orders', element: <MyOrders /> },
     { path: '/my-orders/last', element: <MyOrder /> },
